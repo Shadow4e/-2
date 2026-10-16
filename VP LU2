@@ -1,0 +1,102 @@
+# zad1
+n = int(input('Enter number of numbers: '))
+maxNum = int(input('Enter number: '))
+
+for i in range(n - 1):
+    num = int(input('Enter number: '))
+
+    if num > maxNum:
+        maxNum = num
+        print("the biggest number is:", maxNum)
+
+# zad2*******************************************************************
+n = int(input('Enter number of numbers: '))
+sumNum = 0
+
+for i in range(n):
+    num = int(input('Enter number: '))
+    sumNum = sumNum + num
+
+print("The sum is:", sumNum)
+# zad 3 ***************************************************************
+n = int(input('Enter number: '))
+for i in range(1, n + 1):
+    for j in range(i):
+        print("*", end=" ")
+    print()
+
+# zad 4 *********************************************************************
+n = int(input('Enter number: '))
+
+if n <= 1:
+    print('not prime number')
+else:
+    for i in range(2, n):
+        if n % i == 0:
+            print('not prime number')
+            break
+    else:
+        print('prime number')
+        # zad 5 *********************************************************************
+n = int(input('Enter a number from 1-7: '))
+
+if n == 1:
+    print("Day", n, "is Monday")
+elif n == 2:
+    print("Day", n, "is Tuesday")
+elif n == 3:
+    print("Day", n, "is Wednesday")
+elif n == 4:
+    print("Day", n, "is Thursday")
+elif n == 5:
+    print("Day", n, "is Friday")
+elif n == 6:
+    print("Day", n, "is Saturday")
+elif n == 7:
+    print("Day", n, "is Sunday")
+else:
+    print("Invalid number! Enter a number from 1 to 7.")
+# zad6***************************************************
+n = float(input('Enter a number : '))
+
+if 1 <= n <= 10:
+    print("the number is in the interval")
+else:
+    print("Its outside the interval")
+
+# zad7***************************************************
+n = int(input('Enter the first number: '))
+m = int(input('Enter the second number: '))
+
+op = input('Enter the operation you want to do (+, -, *, /): ')
+
+if op == "+":
+    print("The result is:", n + m)
+
+elif op == "-":
+    print("The result is:", n - m)
+
+elif op == "*":
+    print("The result is:", n * m)
+
+elif op == "/":
+    if m != 0:
+        print("The result is:", n / m)
+    else:
+        print("Can't divide by 0")
+
+else:
+    print("Invalid operation")
+# zad8***************************************************
+n = int(input('Enter the low end: '))
+m = int(input('Enter the high end: '))
+
+count = 0
+
+for i in range(10):
+    num = int(input('Enter number: '))
+
+    if num >= n and num <= m:
+        count = count + 1
+
+print("The total numbers in interval is:", count)
