@@ -1,0 +1,52 @@
+
+number = input("Въведете цяло число: ")
+
+tuple1 = tuple(number)
+tuple2 = tuple1[::-1]
+
+print("Цифри в прав ред:", tuple1)
+print("Цифри в обратен ред:", tuple2)
+
+--------------------------
+import random
+
+nums = []
+
+for i in range(5):
+    nums.append(random.randint(1,10))
+print(f"This are the nums: {nums}")
+
+new_list = []
+
+for i in range(len(nums)):
+    new_list.append(nums[i])
+
+    if i < len(nums)-1:
+     new_list.append(nums[i] + nums[i+1])
+print(new_list)
+--------------------------
+text = input("Write your text here: ")
+
+dictionary = {}
+for char in text:
+    if char in dict:
+        dictionary[char] += 1
+    else:
+        dictionary[char] = 1
+print(dictionary)
+--------------------------
+
+number = int(input("Въведи цяло число: "))
+
+nums = []
+
+for i in range(1, number + 1):
+    nums.append(i)
+
+dictionary = {}
+
+for i in range(len(nums)):
+    dictionary[nums[i]] = nums[-i - 1]
+
+print("Списък:", nums)
+print("Речник:", dictionary)
