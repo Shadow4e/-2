@@ -1,0 +1,83 @@
+sentence = input("Enter a sentence: ")
+words = sentence.split()
+
+unique_words = set(words)
+sorted_words = sorted(unique_words)
+
+print(f"Number of unique words: {len(unique_words)}")
+print("The unique words are: ")
+
+for word in sorted_words:
+    print(word, end = " ")
+########################################################################
+sentence = input("Enter a sentence: ")
+
+char_count = {}
+
+for char in sentence:
+    if char != " ":
+        if char not in char_count:
+            char_count[char] = 1
+        else:
+            char_count[char] += 1
+
+if char_count:
+    max_count = max(char_count.values())
+    most_common = []
+
+    for key, value in char_count.items():
+        if value == max_count:
+            most_common.append(key)
+
+    if len(most_common) == 1:
+        print(f"Най-често срещаният символ е '{most_common[0]}' с {max_count} срещания.")
+    else:
+        formatted_chars = []
+
+        for c in most_common:
+            formatted_chars.append(f"'{c}'")
+        chars_str = ", ".join(formatted_chars)
+        print(f"Най-често срещаните символи са {chars_str}, всеки с по {max_count} срещания.")
+else:
+    print("No valid characters entered.")
+
+########################################################################
+words = input("Enter words separated by space: ").split()
+k = int(input("Enter minimum length: "))
+
+filtered_list = []
+
+for word in words:
+    if len(word) >= k:
+        filtered_list.append(word)
+
+filtered_words = tuple(filtered_list)
+
+print("Филтрирани думи в кортеж:", filtered_words)
+########################################################################
+phone_book = {}
+broi = 0
+
+while broi < 3:
+    name = input("What's the name of the user: ")
+    number = input("What's the phone number: ")
+    phone_book[name] = number
+    broi += 1
+
+search_name = input("Enter name to search for: ")
+
+if search_name in phone_book:
+    print(f"Phone number is: {phone_book[search_name]}")
+
+else:
+    print("Phone number not found")
+########################################################################
+numbers = [1, 2, 2, 3, 1, 4, 2]
+new_list = []
+
+for number in numbers:
+    if number not in new_list:
+        new_list.append(number)
+
+print(new_list)
+########################################################################
